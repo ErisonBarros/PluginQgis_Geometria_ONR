@@ -2,6 +2,11 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [Não publicado]
+
+### Documentação
+- `INSTALACAO.md` com instruções de instalação, ativação, atualização, remoção e solução de problemas.
+
 ## [1.0.0] - 2026-11-04
 
 ### Adicionado

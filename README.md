@@ -24,9 +24,11 @@ Casas decimais indicam resolução de representação, não precisão ou acurác
 
 ### Estado do repositório
 
-O pacote `gerador_descricao_poligonos/` contém `metadata.txt` (versão 1.0.0, QGIS mínimo 3.16), `__init__.py`, `plugin.py` e ícone. Implementado: seleção de camada poligonal, feições selecionadas ou todas, saída em EPSG:4674 ou EPSG:31985, área e perímetro com GRS80, identificação de partes e anéis e exportação TXT. Ainda não há suíte de testes automatizados nem pacote publicado no repositório oficial de plugins do QGIS. Instruções de instalação manual: [`gerador_descricao_poligonos/README.md`](gerador_descricao_poligonos/README.md).
+O pacote `gerador_descricao_poligonos/` contém `metadata.txt` (versão 1.0.0, QGIS mínimo 3.16), `__init__.py`, `plugin.py` e ícone. Implementado: seleção de camada poligonal, feições selecionadas ou todas, saída em EPSG:4674 ou EPSG:31985, área e perímetro com GRS80, identificação de partes e anéis e exportação TXT. Ainda não há suíte de testes automatizados nem pacote publicado no repositório oficial de plugins do QGIS. Instruções de instalação: [`INSTALACAO.md`](INSTALACAO.md).
 
 ### Documentação
+
+- [Instalação do plugin](INSTALACAO.md)
 
 - [Auditoria técnica](docs/AUDITORIA_TECNICA.md)
 
@@ -64,9 +66,11 @@ Decimal places describe numeric representation; they do not establish survey acc
 
 ### Repository status
 
-The `gerador_descricao_poligonos/` package contains `metadata.txt` (version 1.0.0, minimum QGIS 3.16), `__init__.py`, `plugin.py`, and an icon. Implemented: polygon-layer selection, selected or all features, output in EPSG:4674 or EPSG:31985, GRS80 area and perimeter, part/ring identification, and TXT export. There is no automated test suite yet and no release on the official QGIS plugin repository. Manual installation: see [`gerador_descricao_poligonos/README.md`](gerador_descricao_poligonos/README.md).
+The `gerador_descricao_poligonos/` package contains `metadata.txt` (version 1.0.0, minimum QGIS 3.16), `__init__.py`, `plugin.py`, and an icon. Implemented: polygon-layer selection, selected or all features, output in EPSG:4674 or EPSG:31985, GRS80 area and perimeter, part/ring identification, and TXT export. There is no automated test suite yet and no release on the official QGIS plugin repository. Installation instructions (Portuguese): see [`INSTALACAO.md`](INSTALACAO.md).
 
 ### Documentation
+
+- [Plugin installation (PT-BR)](INSTALACAO.md)
 
 - [Technical audit](docs/AUDITORIA_TECNICA.md)
 

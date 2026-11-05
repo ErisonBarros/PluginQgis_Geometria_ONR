@@ -32,12 +32,12 @@
 
   // Sumário a partir de h2/h3
   var toc = document.getElementById("toc");
-  var heads = Array.prototype.filter.call(content.querySelectorAll("h2, h3"), function (h) { return h.id; });
+  var heads = Array.prototype.filter.call(content.querySelectorAll("h2, h3, h4"), function (h) { return h.id; });
   if (toc && heads.length > 1) {
     var ul = document.createElement("ul");
     heads.forEach(function (h) {
       var li = document.createElement("li");
-      li.className = h.tagName === "H3" ? "lvl3" : "lvl2";
+      li.className = "lvl" + h.tagName.charAt(1);
       var a = document.createElement("a");
       a.href = "#" + h.id; a.textContent = h.textContent;
       li.appendChild(a); ul.appendChild(li);

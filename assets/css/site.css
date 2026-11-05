@@ -116,6 +116,11 @@ img { max-width: 100%; }
 .toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
 .toc li a { display: block; padding: 4px 12px; margin-left: -2px; border-left: 2px solid transparent; color: var(--ink-2); text-decoration: none; line-height: 1.4; }
 .toc li.lvl3 a { padding-left: 24px; font-size: 13px; }
+.toc li.lvl4 a { padding-left: 36px; font-size: 12.5px; }
+.content h4 { font-size: 17px; margin: 28px 0 8px; }
+.content h5 { font-size: 15px; margin: 24px 0 8px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); }
+.content input[type="checkbox"] { margin-right: 8px; accent-color: var(--brand); }
+.content li:has(> input[type="checkbox"]) { list-style: none; margin-left: -22px; }
 .toc li a:hover { color: var(--ink); }
 .toc li a.active { color: var(--brand); border-left-color: var(--brand); font-weight: 600; }
 .toc:empty, .toc.is-empty { display: none; }

@@ -1,0 +1,1 @@
+# PluginQgis_Geometria_ONR

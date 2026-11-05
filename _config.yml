@@ -4,7 +4,18 @@
 title: Gerador de Descrição de Polígonos – PyQGIS
 description: Plugin QGIS/PyQGIS para extrair vértices, calcular área e perímetro geodésicos e exportar a descrição de polígonos em SIRGAS 2000.
 lang: pt-BR
-theme: jekyll-theme-cayman
+# Layout próprio em _layouts/default.html (sem tema externo)
+repo: ErisonBarros/PluginQgis_Geometria_ONR
+branch: erison.barros
+plugin_version: "1.0.0"
+qgis_min: "3.16"
+plugin_zip: gerador_descricao_poligonos_qgis.zip
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 plugins:
   - jekyll-readme-index
@@ -31,3 +42,4 @@ exclude:
   - gerador_descricao_poligonos/
   - CHANGELOG.md
   - .gitignore
+  - script_onr.py

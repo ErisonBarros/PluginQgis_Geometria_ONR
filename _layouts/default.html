@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'pt-BR' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.url == "/" %}{% assign titulo = site.title %}{% else %}{% assign titulo = page.title | append: " · " | append: site.title %}{% endif %}
+  <title>{{ titulo }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ titulo }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0f3d4c">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/icon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body class="{% if page.url == '/' %}home{% else %}inner{% endif %}">
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/icon.svg' | relative_url }}" alt="" width="28" height="28">
+        <span>Gerador de Descrição de Polígonos</span>
+      </a>
+      <button class="menu-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav" class="nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}aria-current="page"{% endif %}>Início</a>
+        <a href="{{ '/INSTALACAO.html' | relative_url }}" {% if page.url contains "INSTALACAO" %}aria-current="page"{% endif %}>Instalação</a>
+        <a href="{{ '/docs/PLANO_MODERNIZACAO.html' | relative_url }}" {% if page.url contains "/docs/" %}aria-current="page"{% endif %}>Documentação</a>
+        <a class="nav__gh" href="https://github.com/{{ site.repo }}" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  {% if page.url == "/" %}
+  <section class="hero">
+    <div class="hero__contours" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Plugin QGIS · PyQGIS · SIRGAS 2000</p>
+      <h1>Gerador de Descrição de Polígonos</h1>
+      <p class="lead">{{ site.description }}</p>
+      <ul class="badges">
+        <li>Versão {{ site.plugin_version }}</li>
+        <li>QGIS ≥ {{ site.qgis_min }}</li>
+        <li>EPSG 4674 · 31985</li>
+        <li>GPL-2.0-or-later</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn--primary" href="https://github.com/{{ site.repo }}/raw/{{ site.branch }}/{{ site.plugin_zip }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" /></svg>
+          Baixar plugin (.zip)
+        </a>
+        <a class="btn btn--ghost" href="{{ '/INSTALACAO.html' | relative_url }}">Como instalar</a>
+        <a class="btn btn--ghost" href="https://github.com/{{ site.repo }}">Código-fonte</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features wrap" aria-label="Recursos">
+    <article>
+      <h3>Vértices e anéis</h3>
+      <p>Extrai coordenadas por parte e por anel (externo e internos) de Polygon e MultiPolygon.</p>
+    </article>
+    <article>
+      <h3>Medidas geodésicas</h3>
+      <p>Área e perímetro com <code>QgsDistanceArea</code> e o elipsoide GRS80.</p>
+    </article>
+    <article>
+      <h3>Referencial explícito</h3>
+      <p>Saída em SIRGAS 2000 geográfico (EPSG:4674) ou UTM 25S (EPSG:31985).</p>
+    </article>
+    <article>
+      <h3>Dados preservados</h3>
+      <p>Transforma cópias das geometrias. A camada de origem não é alterada.</p>
+    </article>
+  </section>
+  {% else %}
+  <section class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow"><a href="{{ '/' | relative_url }}">Início</a> / {{ page.title }}</p>
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="wrap layout">
+    <aside class="toc" aria-label="Nesta página">
+      <p class="toc__title">Nesta página</p>
+      <nav id="toc"></nav>
+    </aside>
+    <main id="conteudo" class="content">
+      {{ content }}
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p><strong>Projeto independente</strong>, sem vínculo com o ONR. O relatório gerado é auxiliar e não substitui o memorial descritivo elaborado por profissional habilitado.</p>
+      <p class="muted">Página gerada automaticamente a partir do <a href="https://github.com/{{ site.repo }}/blob/{{ site.branch }}/README.md">README.md</a> · atualizada em {{ site.time | date: "%d/%m/%Y %H:%M" }} (UTC) · <a href="https://github.com/{{ site.repo }}/blob/{{ site.branch }}/LICENSE">GPL-2.0-or-later</a></p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+</body>
+</html>

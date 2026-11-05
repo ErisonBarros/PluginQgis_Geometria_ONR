@@ -5,12 +5,14 @@ name: Publicar GitHub Pages
 
 on:
   push:
-    branches: ["erison.barros", "main"]
+    branches: ["erison.barros"]
     paths:
       - "README.md"
       - "INSTALACAO.md"
       - "docs/**"
       - "_config.yml"
+      - "_layouts/**"
+      - "assets/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 

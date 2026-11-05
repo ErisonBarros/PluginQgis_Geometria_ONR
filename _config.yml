@@ -1,0 +1,33 @@
+# Configuração do site GitHub Pages (Jekyll)
+# A página inicial é gerada automaticamente a partir do README.md
+# (plugin jekyll-readme-index, incluído no build do GitHub Pages).
+title: Gerador de Descrição de Polígonos – PyQGIS
+description: Plugin QGIS/PyQGIS para extrair vértices, calcular área e perímetro geodésicos e exportar a descrição de polígonos em SIRGAS 2000.
+lang: pt-BR
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+relative_links:
+  enabled: true
+  collections: false
+
+readme_index:
+  enabled: true
+  remove_originals: false
+
+titles_from_headings:
+  enabled: true
+  strip_title: false
+
+exclude:
+  - "*.py"
+  - "*.zip"
+  - "*.bundle"
+  - gerador_descricao_poligonos/
+  - CHANGELOG.md
+  - .gitignore

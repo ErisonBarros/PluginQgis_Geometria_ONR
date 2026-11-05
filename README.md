@@ -28,6 +28,8 @@ O pacote `gerador_descricao_poligonos/` contém `metadata.txt` (versão 1.0.0, Q
 
 ### Documentação
 
+- Site do projeto: <https://erisonbarros.github.io/PluginQgis_Geometria_ONR/>
+
 - [Instalação do plugin](INSTALACAO.md)
 
 - [Auditoria técnica](docs/AUDITORIA_TECNICA.md)
@@ -69,6 +71,8 @@ Decimal places describe numeric representation; they do not establish survey acc
 The `gerador_descricao_poligonos/` package contains `metadata.txt` (version 1.0.0, minimum QGIS 3.16), `__init__.py`, `plugin.py`, and an icon. Implemented: polygon-layer selection, selected or all features, output in EPSG:4674 or EPSG:31985, GRS80 area and perimeter, part/ring identification, and TXT export. There is no automated test suite yet and no release on the official QGIS plugin repository. Installation instructions (Portuguese): see [`INSTALACAO.md`](INSTALACAO.md).
 
 ### Documentation
+
+- Project site: <https://erisonbarros.github.io/PluginQgis_Geometria_ONR/>
 
 - [Plugin installation (PT-BR)](INSTALACAO.md)
 

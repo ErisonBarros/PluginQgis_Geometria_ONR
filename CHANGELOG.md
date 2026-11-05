@@ -5,6 +5,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e
 ## [Não publicado]
 
 ### Documentação
+- Site no GitHub Pages gerado a partir do `README.md`, com atualização automática via GitHub Actions (`.github/workflows/pages.yml`, `_config.yml`).
 - `INSTALACAO.md` com instruções de instalação, ativação, atualização, remoção e solução de problemas.
 
 ## [1.0.0] - 2026-11-04

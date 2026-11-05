@@ -1,0 +1,54 @@
+# Publica o site do projeto no GitHub Pages.
+# É executado a cada push que altere o README.md ou outros documentos Markdown,
+# mantendo a página sincronizada com o README automaticamente.
+name: Publicar GitHub Pages
+
+on:
+  push:
+    branches: ["erison.barros", "main"]
+    paths:
+      - "README.md"
+      - "INSTALACAO.md"
+      - "docs/**"
+      - "_config.yml"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Gerar site com Jekyll (README.md como página inicial)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Enviar artefato do site
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

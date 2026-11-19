@@ -5,6 +5,20 @@
 > **Estado:** versão inicial 1.0.0 do plugin (pasta `gerador_descricao_poligonos/`), ainda sem testes automatizados executados em QGIS. Use apenas para avaliação técnica; o relatório gerado é auxiliar e não substitui memorial descritivo nem validação registral.
 >
 > [![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/erisonbarros/pluginqgis_geometria_onr?utm_source=readme&utm_medium=badge)
+> ## Stack Tecnológica
+
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![GeoPandas](https://img.shields.io/badge/GeoPandas-Spatial_DataFrames-139C5A?style=for-the-badge&logo=pandas&logoColor=white)](https://geopandas.org/)
+[![Shapely](https://img.shields.io/badge/Shapely-GEOS_Geometry-2E7D32?style=for-the-badge)](https://shapely.readthedocs.io/)
+[![PostGIS](https://img.shields.io/badge/PostGIS-Spatial_SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://postgis.net/)
+[![QGIS](https://img.shields.io/badge/QGIS-3.x_LTR-589632?style=for-the-badge&logo=qgis&logoColor=white)](https://qgis.org/)
+[![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+
+## Metadados do Repositório
+
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![CRS](https://img.shields.io/badge/CRS-SIRGAS_2000_%2F_WGS84-005A9C?style=for-the-badge)
 
 ## Português
 

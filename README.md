@@ -3,6 +3,8 @@
 **Ferramenta independente em desenvolvimento para análise e descrição técnica de geometrias poligonais no QGIS, com orientações para preparar polígonos para o [Mapa do Registro de Imóveis (ONR)](#onr).**
 
 > **Estado:** versão inicial 1.0.0 do plugin (pasta `gerador_descricao_poligonos/`), ainda sem testes automatizados executados em QGIS. Use apenas para avaliação técnica; o relatório gerado é auxiliar e não substitui memorial descritivo nem validação registral.
+>
+> [![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/erisonbarros/pluginqgis_geometria_onr?utm_source=readme&utm_medium=badge)
 
 ## Português
 
